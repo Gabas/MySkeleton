@@ -1,7 +1,18 @@
 // app/routes.js
 
+
+var router = express.Router();
+
+router.get('/', function(req, res) {
+    res.json({ message: 'hooray! welcome to our api!' });   
+});
+
+app.use('/api', router);
+
 // grab the nerd model we just created
 var Nerd = require('./models/nerd');
+
+
 
     module.exports = function(app) {
 
